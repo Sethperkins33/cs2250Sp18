@@ -28,7 +28,7 @@ const int washI=7;
 // Main Function
 int main()
 {
-    char oil1[] = "oil";
+    char oil1[] = "Oil";
     char oil[] = "change";
     char tire[] = "Tire";
     char tire1[] = "rotation";
