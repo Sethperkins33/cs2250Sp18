@@ -30,9 +30,9 @@ int main()
 {
     char oil1[] = "oil";
     char oil[] = "change";
-    char tire[] = "tire";
+    char tire[] = "Tire";
     char tire1[] = "rotation";
-    char wash[] = "car";
+    char wash[] = "Car";
     char wash1[] = "wash";
     char userJob1[50];
     char userJob2[50];
