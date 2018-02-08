@@ -40,8 +40,11 @@ int main()
     char non[] = "-";
     char userJob1[50];
     char userJob2[50];
+    char u1[50];
+    char u2[50];
     int cost = 0;
     int cost2 = 0;
+
 
     printf("Davy's auto shop services\n\nOil change -- $35\nTire rotation -- $19\nCar wash -- $7\nCar wax -- $12\n");
 
@@ -49,62 +52,56 @@ int main()
     scanf("%s %s", userJob1, userJob2);
 
 
-    printf("You entered: %s %s\n", userJob1, userJob2);
+    printf("You entered: %s %s\n", u1, u2);
     if( strcmp(userJob1, oil1) == 0  && strcmp(userJob2, oil) == 0)
     {   
         cost = cost + oilI;
-        cost2 = cost;
         printf("Enter second service:\n");
 
-        scanf("%s %s", userJob1, userJob2);
+        scanf(" %s%s", u1, u2);
 
-        if( strcmp(userJob1, tire) == 0  && strcmp(userJob2, tire1) == 0)
+        if( strcmp(u1, non) == 0)
         {
-            cost = cost + tireI;
+             printf("No service\n");
+
         }
 
-        else if( strcmp(userJob1, wash) == 0  && strcmp(userJob2, wash1) == 0)
+        else{
+            if(strcmp(userJob1, wash) == 0  && strcmp(userJob2, wash1) == 0)
         {
-            cost = cost + washI;
+            cost2 = cost2 + washI;
         }    
         else if( strcmp(userJob1, wax) == 0  && strcmp(userJob2, wax1) == 0)
         {
-            cost = cost + waxI;
+            cost2 = cost2 + waxI;
         }
 
-        else if( strcmp(userJob1, non) == 0)
-        { 
-            printf("No service");
-        }
         else
         {
             printf("Error: Requested service is not recognized\n");
         }
         printf("Davy's auto shop invoice\n\n");
-        printf("Service 1:%s %s, $%d\n", userJob1, userJob2, cost2);
-
+           }
     }
-
 
     else if( strcmp(userJob1, tire) == 0  && strcmp(userJob2, tire1) == 0)
     {
         cost = cost + tireI;
         printf("Enter second service:\n");
         scanf("%s %s", userJob1, userJob2);
-        cost2 = cost;
-
+     
         if( strcmp(userJob1, oil) == 0  && strcmp(userJob2, oil1) == 0)
         {
-            cost = cost + oilI;
+            cost2 = cost2 + oilI;
         }
 
         else if( strcmp(userJob1, wash) == 0  && strcmp(userJob2, wash1) == 0)
         {
-            cost = cost + washI;
+            cost2 = cost2 + washI;
         }    
         else if( strcmp(userJob1, wax) == 0  && strcmp(userJob2, wax1) == 0)
         {
-            cost = cost + waxI;
+            cost2 = cost2 + waxI;
         }
         else if( strcmp(userJob1, non) == 0)
         { 
@@ -124,24 +121,23 @@ int main()
         cost = cost + washI;
         printf("Enter second service:\n");
         scanf("%s %s", userJob1, userJob2);
-        cost2 = cost;
-
+     
         if( strcmp(userJob1, tire) == 0  && strcmp(userJob2, tire1) == 0)
         {
-            cost = cost + tireI;
+            cost2 = cost2 + tireI;
         }
 
         else if( strcmp(userJob1, oil) == 0  && strcmp(userJob2, oil1) == 0)
         {
-            cost = cost + oilI;
+            cost2 = cost2 + oilI;
         }
         else if( strcmp(userJob1, wax) == 0  && strcmp(userJob2, wax1) == 0)
         {
-            cost = cost + waxI;
+            cost2 = cost2 + waxI;
         }
         else if( strcmp(userJob1, non) == 0)
         { 
-            printf("No service");
+            printf("No service\n");
         }
         else
         {
@@ -157,24 +153,23 @@ int main()
         cost = cost + tireI;
         printf("Enter second service:\n");
         scanf("%s %s", userJob1, userJob2);
-        cost2 = cost;
-
+        
         if( strcmp(userJob1, tire) == 0  && strcmp(userJob2, tire1) == 0)
         {
-            cost = cost + tireI;
+            cost2 = cost2 + tireI;
         }
 
         else if( strcmp(userJob1, wash) == 0  && strcmp(userJob2, wash1) == 0)
         {
-            cost = cost + washI;
+            cost2 = cost2 + washI;
         }
         else if( strcmp(userJob1, oil) == 0  && strcmp(userJob2, oil1) == 0)
         {
-            cost = cost + oilI;
+            cost2 = cost2 + oilI;
         }  
-        else if( strcmp(userJob1, non) == 0)
+        else if( strcmp(u1, non) == 0)
         { 
-            printf("No service");
+            printf("No service\n");
         }
 
         else
@@ -183,8 +178,6 @@ int main()
 
         }
         printf("Davy's auto shop invoice\n\n");
-        printf("Service 1:%s %s, $%d\n", userJob1, userJob2, cost2);
-
     }
 
     else
@@ -192,11 +185,15 @@ int main()
         printf("Error: Requested service is not recognized\n");
     }
     printf("Davy's auto shop invoice\n\n");
-    printf("Service 2:%s %s, $%d\n", userJob1, userJob2, cost);
+    printf("Service 1: %s %s, $%d\n", userJob1, userJob2, cost);
+    printf("Service 2: %s %s, $%d\n\n", u1, u2, cost2);
+    printf("Total: $%d\n", cost + cost2);
+
 
 
     return 0;
 }
+
 // Function Definitions
 
 
