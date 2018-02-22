@@ -25,6 +25,8 @@ const int WEIGHT_COUNT = 5;
 int main()
 {
     double weight[WEIGHT_COUNT];
+    double sum = 0;
+    double max = 0;
 
     for(int i = 0; i < WEIGHT_COUNT; ++i)
     {
@@ -32,13 +34,17 @@ int main()
         scanf("%lf", &weight[i]);
 
     }
-    printf("You entered: %lf %lf %lf %lf %lf \n\n", weight[0], weight[1], weight[2], weight[3], 
-            weight[4]);
-    printf("Total weight: %lf\n", (weight[0] + weight[1] + weight[2] + weight[3] 
-                + weight[4]));
-    printf("Average weight: %lf\n", (weight[0] + weight[1] + weight[2] + weight[3] 
-                + weight[4]) / 5);
-
+    for(int i = 0; i < WEIGHT_COUNT; ++i)
+    {
+        printf("You entered: %lf \n", weight[i]);
+        sum = weight[i] + sum;
+    if( max < weight[i])
+    {
+        max = weight[i];
+    }
+    }
+    printf("sum of weight is %lf\n", sum);
+    printf("The max weight is %lf\n", max);
     //(2) Also output the total weight, by summing the array's elements. (1 pt)
 
     //(3) Also output the average of the array's elements. (1 pt)
