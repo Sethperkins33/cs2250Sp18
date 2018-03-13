@@ -23,6 +23,7 @@ const int Attri = 2;
 
 // Function Prototypes
 
+void InitPlayers(int jerseyNums [], int ratingNums[]);
 // Main Function
 int main()
 {
@@ -32,14 +33,8 @@ int main()
     int pNum[5] ;
     int pRat[5];
     char Up = 'n';
-    for(int i = 1; i <= PLAYERS; i++)
-    {
-        printf("Enter player %d's jersey number:\n", i);
-        scanf(" %d", &pNum[i-1]);
-        printf("Enter player %d's rating:\n", i);
-        scanf(" %d", &pRat[i-1]);
-        printf("\n");
-    } 
+    InitPlayers(jerseyNums[], ratingNums[]);
+
     printf("ROSTER\n");
     for(int i = 1; i <= PLAYERS; ++i)
     {
@@ -97,6 +92,19 @@ int main()
 }
 
 // Function Definitions
+void InitPlayers(int jerseyNums [], int ratingNums[])
+{
+for(int i = 1; i <= PLAYERS; i++)
+    {
+        printf("Enter player %d's jersey number:\n", i);
+        scanf(" %d", &pNum[i-1]);
+        printf("Enter player %d's rating:\n", i);
+        scanf(" %d", &pRat[i-1]);
+        printf("\n");
+    }
+return;
+}
+
 //break down the whole program and do it piece by piece. If I have 
 //questions
 
