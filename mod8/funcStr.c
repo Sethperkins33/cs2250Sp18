@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  sentences.c
+ *       Filename:  funcStr.c
  *
- *    Description: Capture full Strings including spaces
+ *    Description:  
  *
  *        Version:  1.0
- *        Created:  03/13/2018 08:38:28 AM
+ *        Created:  03/13/2018 09:05:53 AM
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -17,25 +17,23 @@
  */
 #include <stdio.h>
 #include <string.h>
+#include "superlib.h"
 
 // Constants
-const int STRSIZE =128;
-// Function Prototypes
-
+const int INPUT_STR_SIZE = 50;
 // Main Function
 int main()
 {
-    char fullName[STRSIZE];
-    printf("Please enter your full name:\n");
-    //scanf("%s", fullName);
-    fgets(fullName, STRSIZE, stdin);
-    printf("Hi [%s]\n", fullName);
-    for( int i = 0; i < strlen(fullName); i++)
-    {
-        printf("%c", fullName[i]);
-    }
+    char userStr[INPUT_STR_SIZE];
+    printf("Enter string with spaces:\n");
+    fgets(userStr, INPUT_STR_SIZE, stdin);
+    
+    StrSpaceToHyphon(userStr, ':');
+
+    printf("String with new thingies: %s\n", userStr);
     return 0;
 }
 // Function Definitions
+
 
 
