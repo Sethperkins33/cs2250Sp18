@@ -16,6 +16,15 @@
  * =====================================================================================
  */
 #include <stdio.h>
+#include "Dude.h"
+    
+void ShowInfo(int age, double weight)
+{
+    printf("Your age is [%d]\n", age);
+    printf("Your weight is [%.2lf]\n", weight);
+    return;
+}
+
 
     /* 
      * ===  FUNCTION  ======================================================================
@@ -28,7 +37,7 @@ void UpdateInfoStruct(SuperDude* sd, int myweight)
 {
     //
     sd->age += weight;
-    sd->weight =sd ->weight * myweight
+    sd->weight =sd ->weight * myweight;
     return;
 }
 
@@ -45,5 +54,14 @@ void ShowInfoAllStruct(const SuperDude sd[])
         printf("[%d] Member info[%d] [%lf] [%c]\n", 
                 i, sd[i].age, sd[i].weight, sd[i].sex);
     }
+    return;
+}
+void InitInfoStruct(SuperDude* sd)
+{
+    //when using an address of a structure,
+    //use arrows instead of dot operator.
+    sd->age = -99;
+    sd->weight = -99.0;
+    sd->sex = 'N';
     return;
 }

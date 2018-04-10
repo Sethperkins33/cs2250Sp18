@@ -31,8 +31,6 @@ typedef struct SuperDude
 }SuperDude; // DO NOT FORGET THE SEMICOLON!!!!
 
 // Function Prototypes
-void ShowInfo(int age, double weight);
-void ShowInfo( SuperDude sd);
 // Main Function
 int main()
 {
@@ -53,11 +51,4 @@ int main()
     return 0;
 }
 // Function Definitions
-
-void ShowInfo(int age, double weight)
-{
-    printf("Your age is [%d]\n", age);
-    printf("Your weight is [%.2lf]\n", weight);
-    return;
-}
 

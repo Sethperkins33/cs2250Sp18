@@ -32,4 +32,7 @@ void ShowInfo(int age, double weight);
 // it is READ only. You cannot modify the values
 void ShowInfoStruct(const SuperDude* sd);
 void InitInfoStruct(SuperDude* sd); // address of SuperDude type
-SuperDude CopyInfoStruct(const SuperDude* sd
+SuperDude CopyInfoStruct(const SuperDude* sd);
+void ShowInfo(int age, double weight);
+void ShowInfo( SuperDude sd);
+#endif 
